@@ -58,7 +58,6 @@
     outline: none;
     border-right: 1px solid #333;
     font-size:17px;
-    color: white;
 }
 
 .center > .searchIcon{
@@ -197,24 +196,6 @@
     display: none;
 }
 
-.btn{
-    padding: 6px;
-    margin: 3px;
-    border: none;
-    background: white;
-    color: black;
-
-}
-
-.light{
-    background: #ffffff;
-    color: #000000;
-}
-
-.dark{
-    background: #333333;
-    color: #ffffff;
-}
 /* RESPONSIVEE */
 @media only screen and (max-width: 768px){
     .wrapper{
