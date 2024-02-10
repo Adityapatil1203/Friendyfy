@@ -19,7 +19,7 @@ const PostDetails = () => {
   useEffect(()=>{
     const fetchPost = async ()=>{
       try {
-         const res = await fetch(`http://localhost:5000/post/find/${id}`)
+         const res = await fetch(`https://friendyfy.onrender.com/post/find/${id}`)
          const data = await res.json()
          setPost(data)
       } catch (error) {
@@ -33,7 +33,7 @@ const PostDetails = () => {
   useEffect(()=>{
    const fetchComments = async ()=>{
       try {
-          const res = await fetch(`http://localhost:5000/comment/${id}`,{
+          const res = await fetch(`https://friendyfy.onrender.com/comment/${id}`,{
             headers:{
               "Authorization":`${token}`
             }
@@ -68,7 +68,7 @@ const PostDetails = () => {
       }
 
       try {
-        const res = await fetch(`http://localhost:5000/comment`,{
+        const res = await fetch(`https://friendyfy.onrender.com/comment`,{
           headers:{
             'Content-Type':'application/json',
             'Authorization':`${token}`

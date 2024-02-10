@@ -37,7 +37,7 @@ const Navbar = () => {
     useEffect(()=>{
         const fetchAllUsers = async()=>{
             try {
-              const res = await fetch(`http://localhost:5000/user/findAll`)
+              const res = await fetch(`https://friendyfy.onrender.com/user/findAll`)
               const data = await res.json()
               setAllUsers(data)
             } catch (error) {
@@ -77,7 +77,7 @@ const Navbar = () => {
             // formData.append('filename',filename)
             // formData.append('image',photo)
 
-            // await fetch(`http://localhost:5000/upload/image`,{
+            // await fetch(`https://friendyfy.onrender.com/upload/image`,{
             //     headers:{
             //        'Authorization':`${token}`
     
@@ -107,7 +107,7 @@ const Navbar = () => {
 
        
         try {
-            const res =await fetch(`http://localhost:5000/user/updateUser/${user._id}`,{
+            const res =await fetch(`https://friendyfy.onrender.com/user/updateUser/${user._id}`,{
                 headers:{
                     'Content-Type':'application/json',
                     'Authorization':`${token}`

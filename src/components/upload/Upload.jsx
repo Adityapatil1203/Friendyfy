@@ -34,7 +34,7 @@ const Upload = () => {
       //   formData.append("filename",filename)
       //   formData.append("image",photo)
 
-      //   await fetch('http://localhost:5000/upload/image',{
+      //   await fetch('https://friendyfy.onrender.com/upload/image',{
       //     headers:{
       //      "Authorization": `${token}`
       //     },
@@ -62,7 +62,7 @@ const Upload = () => {
 
      
 
-       const res = await fetch('http://localhost:5000/post',{
+       const res = await fetch('https://friendyfy.onrender.com/post',{
         headers:{
           'Content-Type': 'application/json',
           "Authorization":`${token}`

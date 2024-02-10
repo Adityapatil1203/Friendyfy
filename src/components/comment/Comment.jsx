@@ -12,10 +12,10 @@ const Comment = ({c}) => {
     const [comment,setComment] = useState(c)
     const [isLiked,setIsLiked] = useState(comment?.likes?.includes(user._id))
 
-    // http://localhost:5000
+    // https://friendyfy.onrender.com
     const handleLikeComment = async() => {
       try {
-        await fetch(`http://localhost:5000/comment/toggleLike/${c?._id}`, {
+        await fetch(`https://friendyfy.onrender.com/comment/toggleLike/${c?._id}`, {
           headers: {
             "Authorization": `${token}`
           },

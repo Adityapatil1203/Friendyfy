@@ -13,7 +13,7 @@ const RightSide = () => {
   useEffect(()=>{
      const fetchFriends = async()=>{
       try {
-        const res  = await fetch(`http://localhost:5000/user/find/friends`,{
+        const res  = await fetch(`https://friendyfy.onrender.com/user/find/friends`,{
            headers:{
             "Authorization" : `${token}`
            }

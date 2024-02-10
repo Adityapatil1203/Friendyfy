@@ -27,7 +27,7 @@ const Post = ({post}) => {
   useEffect(()=>{
     const fetchComments = async(req,res)=>{
       try {
-        const res = await fetch(`http://localhost:5000/comment/${post._id}`,{
+        const res = await fetch(`https://friendyfy.onrender.com/comment/${post._id}`,{
           headers:{
             "Authorization":`${token}`
           }
@@ -45,7 +45,7 @@ const Post = ({post}) => {
 
   const deletePost = async()=>{
      try {
-       await fetch(`http://localhost:5000/post/${post._id}`,{
+       await fetch(`https://friendyfy.onrender.com/post/${post._id}`,{
          headers:{
            "Authorization":`${token}`
          },
@@ -61,7 +61,7 @@ const Post = ({post}) => {
 
   // const handleLikePost = async()=>{
   //    try {
-  //      await fetch(`http://localhost:5000/post/toggleLike/${post._id}`,{
+  //      await fetch(`https://friendyfy.onrender.com/post/toggleLike/${post._id}`,{
   //        headers:{
   //         "Authorization":`${token}`
   //        },
@@ -75,7 +75,7 @@ const Post = ({post}) => {
 
   const handleLikePost = async () => {
     try {
-     const response = await fetch(`http://localhost:5000/post/toggleLikes/${post._id}`, {
+     const response = await fetch(`https://friendyfy.onrender.com/post/toggleLikes/${post._id}`, {
         headers: {
           "Authorization": `${token}`
         },
@@ -97,7 +97,7 @@ const Post = ({post}) => {
 
   const handleBookmark = async()=>{
      try {
-        await fetch(`http://localhost:5000/user/bookmark/${post._id}`,{
+        await fetch(`https://friendyfy.onrender.com/user/bookmark/${post._id}`,{
           headers:{
             "Authorization":`${token}`
           },
@@ -121,7 +121,7 @@ const Post = ({post}) => {
       }
 
       try {
-         const res = await fetch('http://localhost:5000/comment',{
+         const res = await fetch('https://friendyfy.onrender.com/comment',{
           headers:{
             "Content-Type":'application/json',
             "Authorization":`${token}`

@@ -16,7 +16,7 @@ const SuggestedUsers = () => {
     
     const fetchSuggestedUsers = async()=>{
       try {
-         const res = await fetch('http://localhost:5000/user/find/suggestedUsers',{
+         const res = await fetch('https://friendyfy.onrender.com/user/find/suggestedUsers',{
            headers:{
             "Authorization": `${token}`
            }
@@ -35,7 +35,7 @@ const SuggestedUsers = () => {
 
   const toggleFollow = async (id)=>{
      try {
-        await fetch(`http://localhost:5000/user/toggleFollow/${id}`,{
+        await fetch(`https://friendyfy.onrender.com/user/toggleFollow/${id}`,{
            headers:{
             'Authorization': `${token}`
            },

@@ -21,7 +21,7 @@ const ProfileDetail = () => {
    useEffect(()=>{
        const fetchProfile = async ()=>{
         try {
-          const res = await fetch(`http://localhost:5000/user/find/${id}`,{
+          const res = await fetch(`https://friendyfy.onrender.com/user/find/${id}`,{
             headers: {
               'Authorization': `${token}`
             }
@@ -45,7 +45,7 @@ const ProfileDetail = () => {
    useEffect(()=>{
     const fetchProfilePosts = async ()=>{
       try {
-        const res = await fetch(`http://localhost:5000/post/find/userposts/${id}`)
+        const res = await fetch(`https://friendyfy.onrender.com/post/find/userposts/${id}`)
 
         const data = await res.json()
         setProfilePosts(data)
@@ -59,7 +59,7 @@ const ProfileDetail = () => {
   //handle follow function
   const handleFollowFunction =async ()=>{
       try {
-         await fetch(`http://localhost:5000/user/toggleFollow/${profile?._id}`,{
+         await fetch(`https://friendyfy.onrender.com/user/toggleFollow/${profile?._id}`,{
             headers:{
               "Authorization": `${token}`
             },
@@ -86,7 +86,7 @@ const ProfileDetail = () => {
 
   const handleDelete = async()=>{
       try {
-        const res =  await fetch(`http://localhost:5000/user/deleteUser/${profile?._id}`,{
+        const res =  await fetch(`https://friendyfy.onrender.com/user/deleteUser/${profile?._id}`,{
           headers:{
             "Authorization": `${token}`
           },
