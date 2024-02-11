@@ -4,7 +4,6 @@ import { Link, useNavigate } from 'react-router-dom'
 import img from '../../assets/woman.jpg'
 import { useDispatch } from 'react-redux'
 import { login } from '../../redux/authSlice'
-import { useToast } from '@chakra-ui/react' 
 
 const Login = () => {
   const [error,setError] = useState(false)
@@ -12,7 +11,6 @@ const Login = () => {
   const [password,setPassword] = useState('')
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const toast = useToast()
 
  const handleLogin = async(e)=>{
     e.preventDefault();
@@ -31,13 +29,6 @@ const Login = () => {
     console.log(data)
     dispatch(login(data))
     navigate('/')
-    toast({
-      title: "Register successfully",
-      status: "success",
-      duration: 5000,
-      isClosable: true,
-      position: "top-right",
-    });
 
     } catch (error) {
        setError(true)
