@@ -4,6 +4,7 @@ import classes from './signup.module.css'
 import { Link, useNavigate } from 'react-router-dom'
 import img from '../../assets/woman2.jpg'
 import { register } from '../../redux/authSlice'
+import { useToast } from '@chakra-ui/react' 
 
 const Signup = () => {
   const [username , setUsername] = useState('')
@@ -12,6 +13,7 @@ const Signup = () => {
   const [error , setError] = useState(false)
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const toast = useToast()
 
   const handleSignUp = async(e)=>{
       e.preventDefault()
@@ -32,6 +34,13 @@ const Signup = () => {
         console.log(data)
         dispatch(register(data))
         navigate('/')
+        toast({
+          title: "Register successfully",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+          position: "top-right",
+        });
         
       } catch (error) {
          setError(true)
