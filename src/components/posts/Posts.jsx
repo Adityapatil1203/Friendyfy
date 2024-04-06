@@ -15,6 +15,11 @@ const Posts = () => {
           'Authorization':`${token}`
         }
        })
+
+      if (!res.ok) {
+        throw new Error('Failed to fetch timeline posts');
+    }
+      
        const data = await res.json()
        console.log("mi data ahe ",data)
       setPosts(data)
